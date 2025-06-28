@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMDR: Подробное руководство по терапии переработки травм</title>
 
+    <!-- Meta Tags for Social Sharing -->
+    <meta property="og:title" content="EMDR: Подробное руководство по терапии переработки травм">
+    <meta property="og:description"
+        content="Революционная терапия для переработки травм. Разбор по шагам, с нейронаукой и примерами.">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1539627831859-a911cf04d3cd?q=80&w=1974&auto=format&fit=crop">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EMDR: Подробное руководство по терапии переработки травм">
+    <meta name="twitter:description"
+        content="Революционная терапия для переработки травм. Разбор по шагам, с нейронаукой и примерами.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1539627831859-a911cf04d3cd?q=80&w=1974&auto=format&fit=crop">
+
     <!-- Stylish Favicon (Purple & White) -->
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48cGF0aCBmaWxsPSIjYmI4NmZjIiBkPSJNMTYgMCBBMTYgMTYgMCAwIDAgMCAxNiBBMTYgMTYgMCAwIDAgMTYgMzIgViAwIFoiIC8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE2IDAgQTE2IDE2IDAgMCAxIDMyIDE2IEExNiAxNiAwIDAgMSAxNiAzMiBWMCAwIFoiIC8+PC9zdmc+">
@@ -54,7 +68,7 @@
 
         /* --- Navigation Bar --- */
         .navbar {
-            background-color: var(--surface-color);
+            background-color: rgba(30, 30, 30, 0.9);
             border-bottom: 1px solid var(--border-color);
             padding: 0.75rem 1.5rem;
             position: sticky;
@@ -168,21 +182,80 @@
         @media (min-width: 901px) {
 
             body.sidenav-open .navbar,
+            body.sidenav-open #parallax-header,
             body.sidenav-open main {
                 margin-left: var(--sidenav-width);
             }
         }
 
+        /* --- Parallax Header --- */
+        #parallax-header {
+            height: 45vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            /* Crucial for containing the moving background */
+        }
+
+        /* The actual moving background element */
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* FIX: Made the SVG brighter and added more colors */
+            background-image: linear-gradient(rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 0.8)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='4' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='800' height='600' fill='%23121212'/%3E%3Cg stroke-opacity='0.6' stroke-width='2'%3E%3Cpath stroke='%23bb86fc' d='M100 100 L250 200 L100 300 L250 400 L100 500'/%3E%3Cpath stroke='%2303dac6' d='M700 100 L550 200 L700 300 L550 400 L700 500'/%3E%3Cpath stroke='%23bb86fc' d='M250 200 L400 150 L550 200 L400 250 L250 200'/%3E%3Cpath stroke='%2303dac6' d='M250 400 L400 350 L550 400 L400 450 L250 400'/%3E%3Cpath stroke='%23FBC02D' d='M400 150 L400 50'/%3E%3Cpath stroke='%23F44336' d='M250 400 L150 450'/%3E%3Cpath stroke='%234CAF50' d='M550 400 L650 450'/%3E%3Cpath stroke='%23F44336' d='M100 100 L400 250'/%3E%3Cpath stroke='%234CAF50' d='M700 100 L400 250'/%3E%3Cpath stroke='%23FBC02D' d='M100 500 L400 450'/%3E%3Cpath stroke='%2303dac6' d='M700 500 L400 450'/%3E%3C/g%3E%3Cg filter='url(%23glow)'%3E%3Ccircle fill='%23bb86fc' cx='100' cy='100' r='7'/%3E%3Ccircle fill='%23bb86fc' cx='100' cy='300' r='7'/%3E%3Ccircle fill='%23bb86fc' cx='100' cy='500' r='7'/%3E%3Ccircle fill='%23bb86fc' cx='250' cy='200' r='9'/%3E%3Ccircle fill='%23bb86fc' cx='250' cy='400' r='9'/%3E%3Ccircle fill='%2303dac6' cx='700' cy='100' r='7'/%3E%3Ccircle fill='%2303dac6' cx='700' cy='300' r='7'/%3E%3Ccircle fill='%2303dac6' cx='700' cy='500' r='7'/%3E%3Ccircle fill='%2303dac6' cx='550' cy='200' r='9'/%3E%3Ccircle fill='%2303dac6' cx='550' cy='400' r='9'/%3E%3Ccircle fill='white' cx='400' cy='150' r='8'/%3E%3Ccircle fill='white' cx='400' cy='250' r='8'/%3E%3Ccircle fill='white' cx='400' cy='350' r='8'/%3E%3Ccircle fill='white' cx='400' cy='450' r='8'/%3E%3Ccircle fill='%23FDD835' cx='400' cy='50' r='8'/%3E%3Ccircle fill='%23EF5350' cx='150' cy='450' r='8'/%3E%3Ccircle fill='%2366BB6A' cx='650' cy='450' r='8'/%3E%3C/g%3E%3C/svg%3E");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+            /* Place it behind the content */
+            will-change: transform;
+            /* Performance optimization */
+        }
+
+        #parallax-header .header-content {
+            position: relative;
+            /* Ensure text is on top */
+            z-index: 1;
+        }
+
+        #parallax-header h1 {
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            border: none;
+            flex-direction: column;
+        }
+
+        #parallax-header p {
+            max-width: 700px;
+            font-size: 1.1rem;
+            color: var(--text-secondary-color);
+            font-weight: 400;
+        }
 
         /* --- Main Content --- */
         main {
             transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: var(--bg-color);
+            /* Ensure solid background */
+            position: relative;
+            /* Ensure it stacks correctly */
+            z-index: 2;
         }
 
         .container {
             max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
 
         .card {
@@ -210,10 +283,6 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-
-        h1 {
-            font-size: 2.2rem;
         }
 
         h2 {
@@ -348,7 +417,7 @@
             padding: 12px;
             border-radius: 50%;
             box-shadow: 0 4px 10px var(--shadow-color);
-            transition: opacity 0.3s, transform 0.3s;
+            transition: opacity 0.3s, transform 0.3s, margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             transform: translateY(100px);
         }
@@ -369,10 +438,15 @@
         }
 
         /* --- Responsive Design --- */
+        @media (max-width: 900px) {
+            #parallax-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 0 1rem;
-                margin-top: 1rem;
+                padding: 1rem 1rem;
             }
 
             h1 {
@@ -417,16 +491,20 @@
         </a>
     </header>
 
+    <!-- Parallax Header -->
+    <div id="parallax-header">
+        <div class="parallax-bg"></div>
+        <div class="header-content">
+            <h1><span class="material-icons">auto_awesome</span>EMDR: Хирургия Памяти</h1>
+            <p><strong>EMDR (Eye Movement Desensitization and Reprocessing)</strong> — это не просто терапия, а
+                революционный подход к переработке травматических воспоминаний. Давайте разберем его по шагам, с
+                акцентом на нейронауку и практические примеры.</p>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main id="main-content">
         <div class="container">
-            <div class="card">
-                <h1><span class="material-icons">auto_awesome</span>EMDR: Хирургия Памяти</h1>
-                <p><strong>EMDR (Eye Movement Desensitization and Reprocessing)</strong> — это не просто терапия, а
-                    революционный подход к переработке травматических воспоминаний. Давайте разберем его по шагам, с
-                    акцентом на нейронауку и практические примеры.</p>
-            </div>
-
             <h2 id="essence"><span class="material-icons">lightbulb</span>Суть метода: "Перезагрузка" мозга</h2>
             <div class="card">
                 <p>Когда вы вспоминаете травму <em>одновременно</em> с движениями глаз (или другими ритмичными
@@ -633,6 +711,14 @@
 
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- JavaScript-based Parallax Effect ---
+        window.addEventListener('scroll', function () {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            // The 0.3 factor creates the parallax effect. You can adjust it for more or less effect.
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            parallaxBg.style.transform = `translateY(${scrollTop * 0.3}px)`;
         });
 
     </script>
