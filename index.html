@@ -445,8 +445,12 @@
 
         @media (max-width: 768px) {
             #parallax-header {
-                /* FIX: Changed height to min-height for more flexibility and removed padding-top */
                 min-height: 50vh;
+            }
+
+            /* FIX: Added padding-top to the content wrapper to avoid overlap with sticky nav */
+            #parallax-header .header-content {
+                padding-top: 4rem;
             }
 
             .container {
